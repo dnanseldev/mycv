@@ -12,4 +12,16 @@ export class UsersService {
 
     return this.rep.save(user);
   }
+
+  findOne(id: number) {
+    return this.rep.findOneBy({ id });
+  }
+
+  find(email: string) {
+    return this.rep.find({ where: { email } });
+  }
+
+  update() {}
+
+  remove() {}
 }
