@@ -21,7 +21,18 @@ export class UsersService {
     return this.rep.find({ where: { email } });
   }
 
-  update() {}
+  async update(id: number, fields: Partial<User>) {
+    const user = await this.findOne(id);
+    if (!user) throw new Error(`User with id ${id} not found.`);
 
-  remove() {}
+    return this.rep.save({ ...user, ...fields });
+  }
+
+  async remove(id: number) {
+    const user = await this.findOne(id);
+
+    if (!user) throw new Error('User not found');
+
+    return this.rep.remove(user);
+  }
 }

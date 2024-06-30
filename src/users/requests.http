@@ -6,3 +6,9 @@ content-type: application/json
     "email": "dnansel.dev@gmail.com",
     "password": "******"
 }
+
+### Find a particular user with identity
+GET http://localhost:3000/auth/3
+
+### Find all users with a given email
+GET http://localhost:3000/auth?email=dnansel.dev@gmail.com
