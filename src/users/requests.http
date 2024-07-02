@@ -3,8 +3,17 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "dnansel.dev@gmail.com",
-    "password": "******"
+    "email": "dnstonebuilt@gmail.com",
+    "password": "dn132104"
+}
+
+### Signin
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "dnstonebuilt@gmail.com",
+    "password": "dn13210"
 }
 
 ### Find a particular user with id
@@ -14,7 +23,7 @@ GET http://localhost:3000/auth/1
 GET http://localhost:3000/auth?email=dnansel.dev@gmail.com
 
 ### Delete a user with given id
-DELETE http://localhost:3000/auth/4
+DELETE http://localhost:3000/auth/7
 
 ### Update a user
 PATCH http://localhost:3000/auth/1
