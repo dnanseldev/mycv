@@ -14,6 +14,7 @@ export class UsersService {
   }
 
   findOne(id: number) {
+    if (!id) return null;
     return this.rep.findOneBy({ id });
   }
 
