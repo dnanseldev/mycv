@@ -44,3 +44,6 @@ GET http://localhost:3000/auth/colors
 
 ###  Who am i
 GET http://localhost:3000/auth/whoami
+
+### Current user
+GET http://localhost:3000/auth/whoisit
