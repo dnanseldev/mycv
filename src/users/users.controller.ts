@@ -9,12 +9,16 @@ import {
   Post,
   Query,
   Session,
+  UseGuards,
 } from '@nestjs/common';
+import { AuthGuard } from '../guards/auth.guard';
 import { Serialize } from '../interceptors/serialize.interceptor';
 import { AuthService } from './auth.service';
+import { CurrentUser } from './decorators/current-user.decorator';
 import { CreateUserDto } from './dtos/create-user.dto';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { UserDto } from './dtos/user.dto';
+import { User } from './users.entity';
 import { UsersService } from './users.service';
 
 @Controller('auth')
@@ -28,6 +32,12 @@ export class UsersController {
   @Get('/whoami')
   whoAmi(@Session() session: any) {
     return this.usersService.findOne(session.userId);
+  }
+
+  @Get('/whoisit')
+  @UseGuards(AuthGuard)
+  whoIsIt(@CurrentUser() user: User) {
+    return user;
   }
 
   @Post('/signout')
