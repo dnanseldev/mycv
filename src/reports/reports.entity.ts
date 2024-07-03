@@ -3,8 +3,14 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Report {
   @PrimaryGeneratedColumn()
-  id: string;
+  id: number;
+
+  @Column({ default: false })
+  approved: boolean;
 
   @Column()
   price: number;
+
+  @Column()
+  make: string;
 }
