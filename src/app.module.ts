@@ -6,8 +6,8 @@ import { UsersModule } from './users/users.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
-import { Report } from './reports/reports.entity';
-import { User } from './users/users.entity';
+import { Report } from './reports/report.entity';
+import { User } from './users/user.entity';
 
 @Module({
   imports: [
