@@ -1,9 +1,6 @@
-import { Expose } from 'class-transformer';
+import { Expose, Transform } from 'class-transformer';
 
 export class ReportDto {
-  @Expose()
-  approved: boolean;
-
   @Expose()
   price: number;
 
@@ -24,4 +21,9 @@ export class ReportDto {
 
   @Expose()
   lat: number;
+
+  // obj is a reference to the original report entity
+  @Transform(({ obj }) => obj.user.id)
+  @Expose()
+  userId: number;
 }

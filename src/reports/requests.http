@@ -3,11 +3,11 @@ content-type: application/json
 
 {
     "approved": true,
-    "make": "toyota",
-    "model": "corolla",
-    "year": 2018,
-    "mileage": 100000,
+    "make": "honda",
+    "model": "city",
+    "year": 2013,
+    "mileage": 55000,
     "lng": 0,
     "lat": 0,
-    "price": 50000
+    "price": 15000
 }
