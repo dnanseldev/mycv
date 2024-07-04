@@ -1,12 +1,13 @@
-POST http//localhost:3000/reports
+POST http://localhost:3000/reports
 content-type: application/json
 
 {
+    "approved": true,
     "make": "toyota",
     "model": "corolla",
     "year": 2018,
-    "mileage": 100000
+    "mileage": 100000,
     "lng": 0,
-    "lat": 0
+    "lat": 0,
     "price": 50000
 }

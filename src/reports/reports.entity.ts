@@ -1,4 +1,3 @@
-import { User } from 'src/users/users.entity';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
@@ -15,5 +14,18 @@ export class Report {
   @Column()
   make: string;
 
-  user: User;
+  @Column()
+  model: string;
+
+  @Column()
+  year: number;
+
+  @Column()
+  mileage: number;
+
+  @Column()
+  lng: number;
+
+  @Column()
+  lat: number;
 }
