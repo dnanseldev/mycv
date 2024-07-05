@@ -12,7 +12,7 @@ content-type: application/json
 }
 
 ### Update request
-PATCH http://localhost:3000/reports/2
+PATCH http://localhost:3000/reports/5
 content-type: application/json
 
 {
