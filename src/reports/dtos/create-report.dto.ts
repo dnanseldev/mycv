@@ -1,5 +1,4 @@
 import {
-  IsBoolean,
   IsLatitude,
   IsLongitude,
   IsNumber,
@@ -9,9 +8,6 @@ import {
 } from 'class-validator';
 
 export class CreateReportDto {
-  @IsBoolean()
-  approved: boolean;
-
   @IsNumber()
   @Min(0)
   @Max(1000000)
