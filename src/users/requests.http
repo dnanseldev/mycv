@@ -3,7 +3,7 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "rafa.mintot@psn.com",
+    "email": "cris.roberley@gmail.com",
     "password": "adadsdsdsd"
 }
 
@@ -12,7 +12,7 @@ POST http://localhost:3000/auth/signin
 content-type: application/json
 
 {
-    "email": "danstonebuilt@psn.com",
+    "email": "rafa.mintot@psn.com",
     "password": "adadsdsdsd"
 }
 

@@ -2,12 +2,19 @@ POST http://localhost:3000/reports
 content-type: application/json
 
 {
-    "approved": true,
-    "make": "honda",
-    "model": "city",
-    "year": 2013,
-    "mileage": 55000,
+    "make": "chevrolet",
+    "model": "onix",
+    "year": 2016,
+    "mileage": 60000,
     "lng": 0,
     "lat": 0,
-    "price": 15000
+    "price": 48000
+}
+
+### Update request
+PATCH http://localhost:3000/reports/5
+content-type: application/json
+
+{
+    "approved": false
 }
