@@ -27,6 +27,10 @@ export class User {
   @OneToMany(() => Report, (report) => report.user)
   reports: Report[];
 
+  // Roles
+  @Column({ default: true })
+  is_admin: boolean;
+
   //Custom functions
 
   @AfterInsert()
