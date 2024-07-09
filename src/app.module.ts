@@ -2,13 +2,13 @@ import { MiddlewareConsumer, Module, ValidationPipe } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { APP_PIPE } from '@nestjs/core';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { dbConfig } from 'scripts/db/data-source-developement';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ReportsModule } from './reports/reports.module';
 import { UsersModule } from './users/users.module';
 
 const cookieSession = require('cookie-session');
-const dbConfig = require('../ormconfig.js');
 
 @Module({
   imports: [
